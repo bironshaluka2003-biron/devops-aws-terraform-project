@@ -4,33 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My DevOps Project | AWS S3</title>
+    <title>AWS DevOps Project | Cloud Deployment</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Cloud Deployment Project</h1>
-        <p>AWS S3 Static Website Hosting</p>
+
+    <nav class="navbar">
+        <div class="logo">Cloud<span>Deploy</span></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#technologies">Technologies</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#features">Features</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="tag">AWS CLOUD PROJECT</span>
+
+            <h1>Building & Deploying<br>
+                <span>With DevOps</span>
+            </h1>
+
+            <p>
+                A static website hosted on AWS S3, provisioned using
+                Terraform and automatically deployed through GitHub Actions.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#about" class="btn primary">Explore Project</a>
+                <a href="https://github.com/bironshaluka2003-biron/devops-aws-terraform-project"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn secondary">View on GitHub</a>
+            </div>
+
+            <div class="deployment-status">
+                <span class="status-dot"></span>
+                Website Successfully Deployed
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Welcome to My AWS DevOps Project!!</h2>
-            <p>
-                This website is deployed on AWS S3
-                using Terraform Infrastructure as Code.
+
+        <section id="about" class="section">
+            <span class="section-label">OVERVIEW</span>
+            <h2>About The Project</h2>
+
+            <p class="section-description">
+                This project demonstrates how to host a static website
+                on Amazon S3 using Infrastructure as Code. Terraform
+                manages the AWS infrastructure, while GitHub Actions
+                automates website deployment whenever code is pushed
+                to the main branch.
             </p>
-            <span class="status">Deployment Project</span>
         </section>
 
-        <section class="technologies">
+        <section id="technologies" class="section">
+            <span class="section-label">TECH STACK</span>
             <h2>Technologies Used</h2>
-            <p>AWS S3 | Terraform | Git | GitHub</p>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">☁</div>
+                    <h3>AWS S3</h3>
+                    <p>Static website hosting and file storage.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">⚙</div>
+                    <h3>Terraform</h3>
+                    <p>Infrastructure provisioning using code.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">⇄</div>
+                    <h3>GitHub Actions</h3>
+                    <p>Automated CI/CD deployment workflow.</p>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">⌘</div>
+                    <h3>Git & GitHub</h3>
+                    <p>Version control and source code management.</p>
+                </div>
+            </div>
         </section>
+
+        <section id="architecture" class="section">
+            <span class="section-label">WORKFLOW</span>
+            <h2>Deployment Architecture</h2>
+            <p class="section-description">
+                The following workflow illustrates how website changes
+                are automatically deployed to AWS S3.
+            </p>
+
+            <div class="architecture">
+                <div class="architecture-step">Developer</div>
+                <div class="arrow">↓ Git Push</div>
+                <div class="architecture-step">GitHub Repository</div>
+                <div class="arrow">↓ Workflow Trigger</div>
+                <div class="architecture-step">GitHub Actions</div>
+                <div class="arrow">↓ AWS CLI S3 Sync</div>
+                <div class="architecture-step">AWS S3 Bucket</div>
+                <div class="arrow">↓ Static Website Hosting</div>
+                <div class="architecture-step highlight">Live Website</div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <span class="section-label">CAPABILITIES</span>
+            <h2>Key Features</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Infrastructure as Code</h3>
+                    <p>AWS resources are managed using Terraform.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Automated Deployment</h3>
+                    <p>GitHub Actions deploys website updates to S3.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Static Website Hosting</h3>
+                    <p>Website content is hosted using Amazon S3.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Version Control</h3>
+                    <p>Project source code is maintained on GitHub.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section project-info">
+            <span class="section-label">PROJECT DETAILS</span>
+            <h2>Built to Learn. Designed to Deploy.</h2>
+            <p>
+                This project was developed as a practical learning
+                experience in cloud computing, Infrastructure as Code,
+                and CI/CD automation.
+            </p>
+
+            <a href="https://github.com/bironshaluka2003-biron/devops-aws-terraform-project"
+               target="_blank" rel="noopener noreferrer"
+               class="btn primary">Explore GitHub Repository</a>
+        </section>
+
     </main>
 
     <footer>
-        <p>Created as a DevOps Learning Project</p>
+        <p>AWS DevOps Cloud Deployment Project</p>
+        <p>Designed & Developed by Shaluka Kodithuwakku</p>
     </footer>
+
 </body>
 </html>
