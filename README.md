@@ -1,18 +1,28 @@
-﻿# AWS S3 Static Website Hosting using Terraform and GitHub Actions
+﻿
+# AWS DevOps Project – Static Website Deployment
+
+A cloud deployment project demonstrating how to host a static website on **Amazon S3**, provision infrastructure using **Terraform**, and automate website deployment using **GitHub Actions**.
+
+## Live Demo
+
+🌐 [View Live Website](http://shaluka-devops-website-2026.s3-website-ap-southeast-2.amazonaws.com)
 
 ## Project Overview
 
-This project demonstrates how to deploy a static website on AWS S3 using Terraform and automate website deployment using GitHub Actions.
+This project demonstrates a simple CI/CD workflow for deploying a static website to AWS S3.
+
+Terraform is used to provision the AWS infrastructure, while GitHub Actions automatically synchronizes website files with the S3 bucket whenever changes are pushed to the `main` branch.
 
 ## Technologies Used
 
-- AWS S3
-- Terraform
-- Git and GitHub
-- GitHub Actions
-- HTML
-- CSS
-- PowerShell
+| Technology | Purpose |
+|---|---|
+| AWS S3 | Static website hosting |
+| Terraform | Infrastructure as Code |
+| GitHub Actions | CI/CD automation |
+| Git & GitHub | Version control |
+| HTML | Website structure |
+| CSS | Website styling |
 
 ## Architecture
 
@@ -23,75 +33,81 @@ Developer
     v
 GitHub Repository
     |
-    | Trigger Workflow
+    | Workflow Trigger
     v
 GitHub Actions
     |
-    | AWS CLI (S3 Sync)
+    | AWS CLI - S3 Sync
     v
 AWS S3 Bucket
     |
     | Static Website Hosting
     v
 Live Website
+```
 
-## Project Features
+## Key Features
 
-- AWS S3 bucket provisioning using Terraform
-- Static website hosting configuration
-- Automated website file uploads
-- GitHub version control
-- Automated CI/CD deployment using GitHub Actions
-- AWS credentials stored securely using GitHub Secrets
+- AWS S3 static website hosting
+- Infrastructure provisioning using Terraform
+- Automated deployment using GitHub Actions
+- GitHub Secrets for AWS credentials
+- Responsive modern dark-themed website
+- Version control using Git and GitHub
 
 ## Project Structure
 
 ```text
 DevOps-project/
-|
-|-- .github/
-|   |-- workflows/
-|       |-- deploy.yml
-|
-|-- terraform/
-|   |-- main.tf
-|   |-- providers.tf
-|   |-- outputs.tf
-|   |-- variables.tf
-|   |-- upload.tf
-|
-|-- index.html
-|-- style.css
-|-- README.md
-|-- .gitignore
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── terraform/
+│   ├── main.tf
+│   ├── providers.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── upload.tf
+│
+├── index.html
+├── style.css
+├── .gitignore
+└── README.md
 ```
 
-## Deployment Process
+## Deployment Workflow
 
 1. Create AWS infrastructure using Terraform.
 2. Configure S3 static website hosting.
-3. Upload website files to the S3 bucket.
-4. Push project source code to GitHub.
-5. Configure AWS credentials using GitHub Secrets.
-6. GitHub Actions automatically deploys website updates to AWS S3.
+3. Push the project source code to GitHub.
+4. Configure AWS credentials using GitHub Actions Secrets.
+5. GitHub Actions runs when changes are pushed to `main`.
+6. Website files are synchronized with the AWS S3 bucket.
+7. Updated website content becomes available through the S3 website endpoint.
 
-## Live Website
+## Security
 
-http://shaluka-devops-website-2026.s3-website-ap-southeast-2.amazonaws.com
+- AWS credentials are stored in GitHub Actions Secrets.
+- Terraform state files are excluded from Git tracking.
+- Sensitive `.tfvars` files are excluded using `.gitignore`.
 
-## CI/CD Pipeline
-
-Whenever changes are pushed to the main branch, GitHub Actions automatically runs the deployment workflow and synchronizes website files with the AWS S3 bucket.
-
-## Learning Outcomes
+## What I Learned
 
 - Infrastructure as Code (IaC)
-- AWS S3 Static Website Hosting
-- Terraform resource management
+- AWS S3 static website hosting
+- Terraform configuration and validation
 - Git and GitHub version control
-- CI/CD automation
-- Cloud deployment
+- CI/CD pipeline implementation
+- Automated cloud deployment
+
+## Repository
+
+[GitHub – AWS DevOps Terraform Project](https://github.com/bironshaluka2003-biron/devops-aws-terraform-project)
 
 ## Author
 
-Shaluka Kodithuwakku
+**Shaluka Kodithuwakku**
+
+IT Undergraduate | DevOps & Cloud Computing Enthusiast
